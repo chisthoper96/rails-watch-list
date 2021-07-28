@@ -1,0 +1,9 @@
+
+<div class="container">
+    <h1>Lista de peliculas</h1>
+    <p>Find me in app/views/lists/index.html.erb</p>
+
+    <% @lists.each do |list| %>
+        <%= link_to  list.name.capitalize, list_path(list) %>
+    <% end %>
+</div>
