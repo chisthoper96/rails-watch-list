@@ -1,9 +1,10 @@
 <div class="container">
 <h1>Crear un marcador</h1>
 
-  <%= simple_form_for @bookmark do |f| %>
+  <%= simple_form_for [@list, @bookmark] do |f| %>
     <%= f.input :comment %>
-    <!-- <%=  f.association :peliculas %>--> 
+    <% f.association :movie %>
+    <%= f.input :movie_id %>
     <%= f.submit %>
   <% end %>
 </div>
