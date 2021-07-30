@@ -12,6 +12,17 @@
   </head>
 
   <body>
+    <div class="navbar navbar-dark bg-dark">
+      <div class="logo text-white">
+        <P>Peliculas Ruby</P>
+      </div>
+      <div class="links">
+        <%= link_to lists_path, { class: "btn btn-primary" } do %>
+        <span class="label label-primary">lists</span>
+        <% end %>
+      </div>
+    </div>
+
     <%= yield %>
   </body>
 </html>
