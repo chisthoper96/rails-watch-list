@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  root to: 'lists#home'
+  get 'movies/index'
+  get 'movies/show'
+  root to: 'lists#index'
   resources :lists, except: [:edit, :update, :destroy] do
     resources :bookmarks, only: [:new, :create]
   end

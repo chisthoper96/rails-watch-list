@@ -1,9 +1,25 @@
 
-<div class="container">
-    <h1>Lista de peliculas</h1>
-    <p>Find me in app/views/lists/index.html.erb</p>
+<div class="p-4 p-md-5 mb-4 text-white rounded bg-dark d-flex justify-content-between text-primary">
+    <h1 class="">Pelis</h1>
 
+    <div class="i-movie d-flex align-items-center ">
+        <%= link_to  "Crear Lista", new_list_path, class: 'btn btn-lg btn-outline-success mr-5' %>
+        <i class="fas fa-3x fa-film "></i>
+    </div>
+</div>
+
+<div class="container">
+    <div class="sub-title text-center">
+        <h3 class="mt-5">My Lists</h3>
+        <%  %>
+    </div>
+</div>
+
+<div class="container d-flex">
     <% @lists.each do |list| %>
-        <%= link_to  list.name.capitalize, list_path(list) %>
+        <div class="card m-3" style="width: 18rem; ">
+            <%= cl_image_tag list.photo.key, crop: :fill, class: 'h-50' %>
+            <%= link_to  list.name.capitalize, list_path(list), class: 'card-body text-center text-decoration-none' %>
+        </div>
     <% end %>
 </div>
