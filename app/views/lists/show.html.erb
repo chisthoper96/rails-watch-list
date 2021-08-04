@@ -1,9 +1,16 @@
 <div class="container">
 
     <h2 class= "text-center p-3"><%= @list.name.capitalize %> </h2>
+
   <div class="container d-flex flex-row-reverse">
-    <%= link_to  "volver", lists_path, class: '' %>
-    <%= link_to  "Agregar pelicula", new_list_bookmark_path(@list),  class: 'btn btn-lg btn-success' %>
+
+    <%= link_to  lists_path do %>
+      <span><i class="p-2 fas fa-3x fa-arrow-alt-circle-left"></i></span>
+    <% end %>
+    <%= link_to new_list_bookmark_path(@list) do %>
+      <span> <i class="p-2 fas fa-3x fa-plus-square"></i></span>
+    <% end %>
+
   </div>
 
     
